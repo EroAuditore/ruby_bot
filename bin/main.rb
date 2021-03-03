@@ -1,12 +1,19 @@
 
+require 'net/http'
+require 'json'
+
 require './lib/BotTelegram'
 require './lib/Movie'
 
-#botTelegramInstance = BotTelegram.new
+botTelegramInstance = BotTelegram.new
 
-#botTelegramInstance.startbot
+botTelegramInstance.startbot
 
-movies = Movie.new
 
-json_response =  movies.searchMovie('insidius')
 
+#json_response =  movies.topMovies
+
+#json_response['items'].each do |item|
+#        puts "#{item['id']}: #{item['title']}"
+#end
+       

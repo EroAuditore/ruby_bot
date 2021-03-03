@@ -13,18 +13,15 @@ class Movie
         url = api_url + movieName;
         uri = URI(url)
         response = Net::HTTP.get(uri)
-        puts response
         response = JSON.parse(response)
         response
         
     end
-    def TopMovies()
+    def topMovies()
         url = 'https://imdb-api.com/en/API/MostPopularMovies/k_irk4ymps';
         uri = URI(url)
         response = Net::HTTP.get(uri)
-        puts response
         response = JSON.parse(response)
         response
-        
     end
 end
