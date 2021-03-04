@@ -10,7 +10,7 @@ botTelegramInstance.startbot
 
 
 movies = Movie.new
-json_response =  movies.inTheaters
+json_response =  movies.soon
 
 json_response['items'].each do |item|
         image = item['image'].sub! 'original', '192x264'

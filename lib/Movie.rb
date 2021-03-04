@@ -39,4 +39,11 @@ class Movie
         response = JSON.parse(response)
         response
     end
+    def soon
+        url = 'https://imdb-api.com/en/API/ComingSoon/k_irk4ymps';
+        uri = URI(url)
+        response = Net::HTTP.get(uri)
+        response = JSON.parse(response)
+        response
+    end
 end
