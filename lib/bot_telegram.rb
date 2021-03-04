@@ -17,14 +17,20 @@ class BotTelegram
         case message.text
         when '/help'
           bot.api.send_message(chat_id: message.chat.id,
-                               text: "Hi #{message.from.first_name} I'm EroBot the master of the movies. Use /top10 to see the top movies of the year ")
+                               text: "Hi #{message.from.first_name} I'm Moviebot here are the Commands avialable to use: \n
+                               /top10 The top 10 movies of the year \n
+                               /soon Comming soon movies \n
+                               /intheaters Movies that now are in the theaters \n
+                               /suggest Suggested movie for today \n
+                               /help Commands avialables
+                               ")
 
         when '/start'
           bot.api.send_message(chat_id: message.chat.id,
-                               text: "Hi #{message.from.first_name} I'm EroBot the master of the movies. Use /top10 to see the top movies of the year ")
+                               text: "Hi #{message.from.first_name} I'm Movie bot guru of the movies. Use /help the see what I can do for you ;) ")
         when '/stop'
           bot.api.send_message(chat_id: message.chat.id,
-                               text: "Bye ya no funciono :'(, #{message.from.first_name}")
+                               text: "Bye #{message.from.first_name}")
         when '/analize'
           bot.api.send_message(chat_id: message.chat.id,
                                text: "Hola #{message.from.first_name} voy analizar tus chats para determinar tu personalidad :D ")
