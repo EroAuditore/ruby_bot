@@ -5,7 +5,7 @@ class Movie
   attr_accessor :token, :api_url
 
   def initialize
-    @token = 'k_irk4ymps'
+    @token = 'k_irk4ympss'
     @api_url = 'https://imdb-api.com/en/API/SearchMovie/k_irk4ymps/'
   end
 
