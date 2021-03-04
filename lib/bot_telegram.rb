@@ -6,9 +6,9 @@ require 'telegram/bot'
 class BotTelegram
   attr_accessor :token, :movies
 
-  def initialize
-    @token = '1686908381:AAE8H94uvBh8jvpWesz4Mrlmt3AL1gWZ50s'
-    @movies = Movie.new
+  def initialize(token_b = '1686908381:AAE8H94uvBh8jvpWesz4Mrlmt3AL1gWZ50s', token_api = 'k_28o0a0zk')
+    @token = token_b
+    @movies = Movie.new(token_api)
   end
 
   def startbot

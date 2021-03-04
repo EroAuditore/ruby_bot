@@ -4,9 +4,9 @@ require 'json'
 class Movie
   attr_accessor :token, :api_url
 
-  def initialize
-    @token = 'k_irk4ympss'
-    @api_url = 'https://imdb-api.com/en/API/SearchMovie/k_irk4ymps/'
+  def initialize(token)
+    @token = token
+    @api_url = 'https://imdb-api.com/en/API/SearchMovie/'
   end
 
   def search_movie(movie_mame = '')
@@ -17,14 +17,14 @@ class Movie
   end
 
   def top_movies
-    url = 'https://imdb-api.com/en/API/MostPopularMovies/k_irk4ymps'
+    url = "https://imdb-api.com/en/API/MostPopularMovies/#{@token}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
     JSON.parse(response)
   end
 
   def rand_movie
-    url = 'https://imdb-api.com/en/API/MostPopularMovies/k_irk4ymps'
+    url = "https://imdb-api.com/en/API/MostPopularMovies/#{@token}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
     response = JSON.parse(response)
@@ -32,14 +32,14 @@ class Movie
   end
 
   def in_theaters
-    url = 'https://imdb-api.com/en/API/InTheaters/k_irk4ymps'
+    url = "https://imdb-api.com/en/API/InTheaters/#{@token}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
     JSON.parse(response)
   end
 
   def soon
-    url = 'https://imdb-api.com/en/API/ComingSoon/k_irk4ymps'
+    url = "https://imdb-api.com/en/API/ComingSoon/#{@token}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
     JSON.parse(response)
