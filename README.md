@@ -4,50 +4,56 @@
 
 # Project : Telegram bot
 
-> This project is a telegram bot imple
+> Telegram bot developed on official telegram API's resources and imdb API to interact on a given workspace and ask for the movies of the moment.
 
-![Screenshot from 2021-02-15](https://user-images.githubusercontent.com/60273425/108003036-ffb95880-6fb6-11eb-8a68-519eac9dd36d.PNG)
+![Captura1](https://user-images.githubusercontent.com/60273425/110024587-ec66f680-7cf3-11eb-9344-c8ece6b16745.PNG)
 
 ## Built With
 
-- RUBY
+- Ruby
+- Telegram api
+- imdb-api
 
 ## Getting Started
 
-> The proyect contains two files "enumerable.rb" and "main.rb"
+> To get a local copy up and running follow these simple steps.
+> Clone or fork the <a href="https://github.com/EroAuditore/ruby_bot">repo</a> .
 
-How ot use it:
+## Setup
 
-- main.rb is for testing enumerable methods
-- Import enumerable.rb in your project "require './enumerable' "
+### Step 1: Clone and install dependencies
 
-Methods included:
+Clone the repo and run `bundle install` to get all the gems on your terminal.
 
-- my_each
-- my_each_with_index
-- my_select
-- my_all?
-- my_any?
-- my_none?
-- my_count
-- my_map
-- my_inject
-- multiply_els
+### Step 2: Get your tokens for imdb-api and telegram botFather
 
-### Setup
+You will have to register on [imdb](https://imdb-api.com/) get a token then on [telegram](https://core.telegram.org/bots#6-botfather) follow instructions to talk with botFather [botfather](https://t.me/botfather) to create a new bot and get it's token.
 
-- Install [git](https://git-scm.com/downloads)
-- Open Terminal
-- Change directory to folder to download repository
-- Use `cd <file-path>`
-- Run `git clone https://github.com/EroAuditore/ruby_enums.git`
-- Install [Ruby](https://ruby-doc.org/downloads/)
-- Run `ruby main.rb`
+### Step 3: Use the tokens on main.rb
 
-## Dependencies
+Once you have both tokens from imdb and telegram you have to use them on the main.rb on the Class constructor of BotTelegram
+![Captura2](https://user-images.githubusercontent.com/60273425/110026507-57193180-7cf6-11eb-9939-29af0427ca30.PNG)
 
-- Robocop
-  - Run `install rubocop`
+### Step 4: Run the bot
+
+To start the bot you have to run the command on your terminal `bin/main.rb`
+
+## How it Works
+
+> To use the telegram bot go to telegram app you have join the channel of bot created with [botFather] (https://t.me/botfather)
+> ![tempsnip](https://user-images.githubusercontent.com/60273425/110027675-e70bab00-7cf7-11eb-9cac-2a4f694e0d8f.png)
+
+### Step 1: Join The bot channel
+
+Once you've joined the channel tap on start
+
+![Captura3](https://user-images.githubusercontent.com/60273425/110028013-57b2c780-7cf8-11eb-930f-2db0115e9e70.PNG)
+
+### Step 2: List the commands avialable for the bot
+
+Type /help to see the commands avialables on the bot
+
+![Captura4](https://user-images.githubusercontent.com/60273425/110028179-892b9300-7cf8-11eb-8bfd-8406e0c12759.PNG)
 
 ## Author
 
