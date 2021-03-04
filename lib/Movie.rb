@@ -32,4 +32,11 @@ class Movie
         sample = response['items'].to_a.sample(1)
         sample
     end
+    def inTheaters
+        url = 'https://imdb-api.com/en/API/InTheaters/k_irk4ymps';
+        uri = URI(url)
+        response = Net::HTTP.get(uri)
+        response = JSON.parse(response)
+        response
+    end
 end
