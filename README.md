@@ -36,7 +36,7 @@ Once you have both tokens from imdb and telegram you have to use them on the mai
 
 ### Step 4: Run the bot
 
-To start the bot you have to run the command on your terminal `bin/main.rb`
+To start the bot you have to run the command on your terminal `ruby bin/main.rb` or enter in bin folder an run the command `ruby main.rb`
 
 ## How it Works
 
