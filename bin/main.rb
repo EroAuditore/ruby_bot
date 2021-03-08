@@ -1,4 +1,4 @@
-#!/usr/bin/envy ruby
+
 
 require 'net/http'
 require 'json'
