@@ -44,4 +44,5 @@ class Movie
     response = Net::HTTP.get(uri)
     JSON.parse(response)
   end
+  private :search_movie
 end

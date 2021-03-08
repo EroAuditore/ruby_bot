@@ -13,7 +13,7 @@ class BotTelegram
 
   def startbot
     Telegram::Bot::Client.run(@token) do |bot|
-      puts "Telegram bot running..."
+      puts 'Telegram bot running...'
       bot.listen do |message|
         case message.text
         when '/help'
@@ -71,7 +71,7 @@ class BotTelegram
         end
       end
     end
-    puts "Telegram bot ended"
+    puts 'Telegram bot ended'
   end
 end
 
